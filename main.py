@@ -16,7 +16,7 @@ class garminInterface:
         messages, errors = decoder.read()
 
         # if the .fit file was properly converted
-        if errors != []:
+        if errors == []:
             original_stdout = sys.stdout  # Save a reference to the original standard output
             with open(fileName, 'w') as f:
                 # Change the standard output to the file we created.
